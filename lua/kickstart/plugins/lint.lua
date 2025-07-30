@@ -7,6 +7,15 @@ return {
       local lint = require 'lint'
       lint.linters_by_ft = {
         markdown = { 'markdownlint' },
+        json = { "jsonlint" },
+        cpp = { "clangtidy" },
+        python = { 'ruff' },        -- Python linter
+        yaml = { 'yamllint' },        -- YAML linter
+        javascript = { 'eslint' },    -- JavaScript linter
+        typescript = { 'eslint' },    -- TypeScript linter
+        bash = { 'shellcheck' },      -- Bash linter
+        go = { 'golangci-lint' }     -- Go linter
+
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,
